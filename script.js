@@ -1,17 +1,17 @@
 function getComputerChoice() {
-    let choice = Math.floor(Math.random() * 3);
+    let computerChoice = Math.floor(Math.random() * 3) + 1;
 
-    switch (choice) {
-        case 0:
-            console.log("rock");
+    switch (computerChoice) {
+        case 1:
+            return "rock";
             break;
 
-        case 1:
-            console.log("paper");
+        case 2:
+            return "paper";
             break;
     
-        case 2:
-            console.log("scissors");
+        case 3:
+            return "scissors";
             break;
 
         default:
@@ -19,4 +19,31 @@ function getComputerChoice() {
     }
 }
 
-getComputerChoice();
+console.log(getComputerChoice());
+
+function getHumanChoice() {
+    let humanChoice = Number(prompt(`
+        1- Rock
+        2- Paper
+        3- Scissors
+    `));
+
+    switch (humanChoice) {
+        case 1:
+            return "rock";
+            break;
+
+        case 2:
+            return "paper";
+            break;
+    
+        case 3:
+            return "scissors";
+            break;
+
+        default:
+            break;
+    }
+}
+
+console.log(getHumanChoice());
