@@ -44,11 +44,31 @@ function getHumanChoice() {
     }
 }
 
-/*--------------------------------- main ----------------------------------*/
 
-function main() {
-    let computerScore = 0;
-    let humanScore = 0;
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+
+    if (humanChoice === computerChoice) {
+        console.log(`Draw! ${computerChoice} equals ${humanChoice}`);
+    } else if ((humanChoice === "rock" && computerChoice === "paper")
+        || (humanChoice === "paper" && computerChoice === "scissors")
+        || (humanChoice === "scissors" && computerChoice === "rock")) {
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+            computerScore++;
+    } else {
+        console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
+        humanScore++;
+    }
 }
 
-main();
+/*--------------------------------- main ----------------------------------*/
+
+let computerScore = 0;
+let humanScore = 0;
+
+playRound(getHumanChoice(), getComputerChoice());
+
+console.log(`
+Computer Score: ${computerScore}
+Human Score: ${humanScore}
+`);
