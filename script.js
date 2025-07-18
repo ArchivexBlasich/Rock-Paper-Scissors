@@ -19,8 +19,6 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
-
 function getHumanChoice() {
     let humanChoice = Number(prompt(`
         1- Rock
@@ -46,4 +44,11 @@ function getHumanChoice() {
     }
 }
 
-console.log(getHumanChoice());
+/*--------------------------------- main ----------------------------------*/
+
+function main() {
+    let computerScore = 0;
+    let humanScore = 0;
+}
+
+main();
