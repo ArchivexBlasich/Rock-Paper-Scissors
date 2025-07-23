@@ -41,11 +41,6 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame() {
-    
-}
-
-
 /*--------------------------------- Events Handlers ---------------------- */
 
 function handButtonClick(e) {
@@ -85,6 +80,16 @@ function handButtonClick(e) {
 
     humanDisplay.textContent = humanScore;
     computerDisplay.textContent = computerScore;
+
+    if (humanScore === 5 || computerScore === 5) {
+        const body = document.querySelector("body");
+
+        if (humanScore === 5) body.setAttribute("style", "background: green;");
+        else body.setAttribute("style", "background: red;");
+
+        this.removeEventListener("click", setButtonBackground);
+        this.removeEventListener("click", handButtonClick);
+    }
 }   
 
 function setButtonBackground(e) {
@@ -105,5 +110,3 @@ buttons.addEventListener("click", handButtonClick);
 
 let computerScore = 0;
 let humanScore = 0;
-
-playGame();
