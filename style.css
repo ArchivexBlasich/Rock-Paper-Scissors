@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 50px;
+    padding: 60px 50px;
 }
 
 .results label {
@@ -71,12 +71,20 @@ body {
     padding: 40px 50px;
 }
 
+.options-to-select button:hover {
+    background-color: rgb(255, 115, 0);
+}
+
 .win {
     background-color: green;
 }
 
 .loose {
     background-color: red;
+}
+
+.tie {
+    background-color: yellow;
 }
 
 .selected {
