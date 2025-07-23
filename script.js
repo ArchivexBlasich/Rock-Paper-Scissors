@@ -62,18 +62,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    for (let i = 0; i < 5; i++) {
-        playRound(getHumanChoice(), getComputerChoice());
-    }
-
-    console.log(`
-    Computer Score: ${computerScore}
-    Human Score: ${humanScore}
-
-    `);
-
-    console.log("The Winner is: ");
-    (computerScore > humanScore) ? console.log("Computer") : console.log("Human");
+    
 }
 
 /*--------------------------------- main ----------------------------------*/
